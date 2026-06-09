@@ -225,13 +225,11 @@ Threat Level    : Critical Risk
 </td>
 </tr>
 </table>
----
 
-## Result pannel
 <h2 align="center">Result pannel</h2>
 
 <p align="center">
-  <img src="screenshots/result-pannel.png" width="900">
+  <img src="screenshots/result pannel.png" width="500">
 </p>
 ## 🎯 Applications
 
