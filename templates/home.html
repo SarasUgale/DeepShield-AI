@@ -1,52 +1,257 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="text-center max-w-4xl mx-auto animate-slideFadeIn">
-  <h1 class="font-orbitron text-5xl text-neon ">
-    Deepfake Detection
-  </h1>
-  <p class="font-poppins text-gray-300 mb-8 text-lg leading-relaxed opacity-0 animate-fadeIn" style="animation-delay: 0.5s;">
-    Deepfakes are synthetic media where a person in an existing image or video is replaced with someone else's likeness.
-    This technology can be misused to spread misinformation, damage reputations, and cause harm. Our mission is to empower users
-    to identify deepfake content reliably.
-  </p>
 
-  <div class="relative mx-auto mb-10 max-w-3xl aspect-video rounded-lg overflow-hidden shadow-lg ring-2 ring-accent hover:ring-neon transition opacity-0 animate-fadeIn" style="animation-delay: 0.8s;">
-    <iframe 
-      src="static/video/DFD_Video.mp4" 
-      title="What is a Deepfake? | Deepfake Detection" 
-      frameborder="0" allowfullscreen 
-      class="w-full h-full"
-      loading="lazy"
-      ></iframe>
-  </div>
+<!-- HERO SECTION -->
 
-  <h2 class="text-3xl font-orbitron text-accent mb-8 opacity-0 animate-fadeIn" style="animation-delay: 1.1s;">Why Deepfake Detection Matters</h2>
+<section class="hero">
 
-  <div class="grid md:grid-cols-3 gap-8 opacity-0 animate-fadeIn" style="animation-delay: 1.4s;">
-    <div class="bg-darkbg rounded-lg p-6 shadow-lg border border-neon/30 hover:border-neon transition flex flex-col items-center text-center">
-      <img src="{{ url_for('static', filename='icons/info.svg') }}" alt="Information" class="w-16 h-16 mb-4" />
-      <h3 class="font-orbitron text-xl text-neon mb-2">Misinformation Control</h3>
-      <p class="text-gray-400 font-poppins">
-        Deepfakes can spread false information rapidly. Detecting them helps protect truth.
-      </p>
+    <div>
+
+        <h1>
+            Detect Deepfakes with
+            <span class="gradient-text">
+                AI Precision
+            </span>
+        </h1>
+
+        <p>
+            DeepShield AI is a deep learning-powered platform that analyzes
+            videos and identifies manipulated content using advanced
+            ResNeXt + LSTM architectures, helping organizations and individuals
+            fight misinformation and protect digital trust.
+        </p>
+
+        <a href="{{ url_for('detect') }}" class="primary-btn">
+            Start Detection
+        </a>
+
     </div>
 
-    <div class="bg-darkbg rounded-lg p-6 shadow-lg border border-neon/30 hover:border-neon transition flex flex-col items-center text-center">
-      <img src="{{ url_for('static', filename='icons/warning.svg') }}" alt="Warning" class="w-16 h-16 mb-4" />
-      <h3 class="font-orbitron text-xl text-neon mb-2">Privacy Protection</h3>
-      <p class="text-gray-400 font-poppins">
-        Prevent malicious use of your likeness by detecting manipulated videos early.
-      </p>
-    </div>
-
-    <div class="bg-darkbg rounded-lg p-6 shadow-lg border border-neon/30 hover:border-neon transition flex flex-col items-center text-center">
-      <img src="{{ url_for('static', filename='icons/deepfake.svg') }}" alt="Deepfake" class="w-16 h-16 mb-4" />
-      <h3 class="font-orbitron text-xl text-neon mb-2">Cutting-edge AI</h3>
-      <p class="text-gray-400 font-poppins">
-        Our detection model uses state-of-the-art neural networks to analyze video authenticity.
-      </p>
-    </div>
-  </div>
 </section>
+
+<!-- STATS -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Platform Statistics
+    </h2>
+
+    <div class="grid-4">
+
+        <div class="glass-card card">
+
+            <div class="stat-number counter" data-target="89">
+                0
+            </div>
+
+            <div class="stat-label">
+                Detection Accuracy %
+            </div>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <div class="stat-number counter" data-target="5500">
+                0
+            </div>
+
+            <div class="stat-label">
+                Videos Processed
+            </div>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <div class="stat-number counter" data-target="5">
+                0
+            </div>
+
+            <div class="stat-label">
+                Seconds Analysis Time
+            </div>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <div class="stat-number counter" data-target="24">
+                0
+            </div>
+
+            <div class="stat-label">
+                Availability
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TECH STACK -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Technology Stack
+    </h2>
+
+    <div class="grid-3">
+
+        <div class="glass-card card">
+
+            <h3>
+                PyTorch
+            </h3>
+
+            <p>
+                Deep learning framework powering model training and inference.
+            </p>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <h3>
+                OpenCV
+            </h3>
+
+            <p>
+                Advanced video frame extraction and image processing.
+            </p>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <h3>
+                Flask
+            </h3>
+
+            <p>
+                Lightweight backend framework serving AI predictions.
+            </p>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <h3>
+                ResNeXt
+            </h3>
+
+            <p>
+                Powerful CNN architecture for extracting visual features.
+            </p>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <h3>
+                LSTM
+            </h3>
+
+            <p>
+                Sequential frame analysis for temporal understanding.
+            </p>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <h3>
+                Face Recognition
+            </h3>
+
+            <p>
+                Face extraction and manipulation pattern detection.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY DEEPSHIELD -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Why DeepShield AI?
+    </h2>
+
+    <div class="grid-3">
+
+        <div class="glass-card card">
+
+            <h3>
+                Real-Time Detection
+            </h3>
+
+            <p>
+                Analyze videos within seconds and obtain confidence scores
+                instantly.
+            </p>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <h3>
+                High Accuracy
+            </h3>
+
+            <p>
+                Powered by advanced deep learning architectures trained on
+                large-scale datasets.
+            </p>
+
+        </div>
+
+        <div class="glass-card card">
+
+            <h3>
+                Enterprise Ready
+            </h3>
+
+            <p>
+                Designed for media verification, cybersecurity and digital
+                content authentication.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section">
+
+    <div class="glass-card card">
+
+        <h2 style="font-size:3rem;margin-bottom:20px;">
+            Ready to Analyze Videos?
+        </h2>
+
+        <p style="margin-bottom:30px;">
+            Upload a video and let DeepShield AI determine whether
+            it is authentic or manipulated.
+        </p>
+
+        <a href="{{ url_for('detect') }}" class="primary-btn">
+            Launch Detector
+        </a>
+
+    </div>
+
+</section>
+
 {% endblock %}
